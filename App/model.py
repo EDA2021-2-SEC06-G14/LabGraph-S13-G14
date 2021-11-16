@@ -181,7 +181,7 @@ def minimumCostPaths(analyzer, initialStation):
     analyzer['paths'] = djk.Dijkstra(analyzer['connections'], initialStation)
     return analyzer
 
-
+#popopopo
 def hasPath(analyzer, destStation):
     """
     Indica si existe un camino desde la estacion inicial a la estación destino
