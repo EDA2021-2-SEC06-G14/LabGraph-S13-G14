@@ -85,7 +85,7 @@ def KosarajuSCC(graph):
     except Exception as exp:
         error.reraise(exp, 'scc:Kosaraju')
 
-#popopopopo
+
 def sccCount(graph, scc, vert):
     """
     Este algoritmo cuenta el número de componentes conectados.

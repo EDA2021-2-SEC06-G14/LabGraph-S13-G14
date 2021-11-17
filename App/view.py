@@ -29,7 +29,9 @@ import sys
 import config
 import threading
 from App import controller
+from time import process_time
 from DISClib.ADT import stack
+
 assert config
 
 """
@@ -40,7 +42,7 @@ operación seleccionada.
 """
 
 # ___________________________________________________
-#  Variables
+#  Variables-
 # ___________________________________________________
 
 
@@ -134,8 +136,11 @@ def thread_cycle():
 
         elif int(inputs[0]) == 4:
             msg = "Estación Base: BusStopCode-ServiceNo (Ej: 75009-10): "
+            t1 = process_time()
             initialStation = input(msg)
             optionFour(cont, initialStation)
+            t2 = process_time()
+            print("Time = " + str(t2 - t1) + "seg \n")
 
         elif int(inputs[0]) == 5:
             destStation = input("Estación destino (Ej: 15151-10): ")
@@ -143,7 +148,10 @@ def thread_cycle():
 
         elif int(inputs[0]) == 6:
             destStation = input("Estación destino (Ej: 15151-10): ")
+            t1 = process_time()
             optionSix(cont, destStation)
+            t2 = process_time()
+            print("Time = " + str(t2 - t1) + "seg \n")
 
         elif int(inputs[0]) == 7:
             optionSeven(cont)
